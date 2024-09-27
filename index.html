@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script href="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="principal">
+      <div class="centro">
+        <h1 class="plus-jakarta-sans-700">Mortgage Calculator</h1>
+        <p class="plus-jakarta-sans-500">Clear All</p>
+      </div>
+
+      <h3 class="plus-jakarta-sans-500">Mortgage Amount</h3>
+      <div class="mortgage-amount-container">
+        <input type="text" id="mortgage-amount" class="mortgage-amount" placeholder="0">
+      </div>
+      <div class="espacio-bottom">
+        <h4 class="plus-jakarta-sans-500">Mortgage Term</h4>
+        <div class="mortgage-term-container">
+          <input type="text" id="mortgage-term" class="mortgage-term" placeholder="0">
+        </div>
+
+        <h5 class="plus-jakarta-sans-500">Interest Rate</h5>
+        <div class="interest-rate-container">
+          <input type="text" id="interest-rate" class="interest-rate" placeholder="0">
+        </div>
+      </div>
+
+      <h6 class="plus-jakarta-sans-500">Mortgage Type</h6>
+      <botton class="repayment plus-jakarta-sans-700">Repayment</botton>
+      <botton class="interest-only repayment plus-jakarta-sans-700 ">Interest Only</botton>
+      <botton class="calculate  plus-jakarta-sans-700"><img class="icon"
+          src="./assets/images/icon-calculator.svg">Calculate Repayments</botton>
+    </div>
+
+    <div class="preresultado">
+      <img src="/mortgage-repayment-calculator-main/assets/images/illustration-empty.svg" class="calculadora">
+      <h7 class="result plus-jakarta-sans-700">Results shown here</h7>
+      <p class="requisito">Complete the form and click “calculate repayments” to see what
+        your monthly repayments would be.</p>
+    </div>
+    <!-- Empty results start 
+  
+  -->
+
+    <!-- Empty results end -->
+
+    <!-- Completed results start 
+    <h></h>Your results
+
+    Your results are shown below based on the information you provided.
+    To adjust the results, edit the form and click “calculate repayments” again.
+
+    Your monthly repayments
+
+    Total you'll repay over the term
+-->
+    <!-- Completed results end -->
+  </div>
+</body>
+
+</html>

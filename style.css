@@ -1,0 +1,317 @@
+:root {
+    --colorLime: hsl(61, 70%, 52%);
+    --colorRed: hsl(4, 69%, 50%);
+    --colorWhite: hsl(0, 0%, 100%);
+    --Slate100: hsl(202, 86%, 94%);
+    --Slate300: hsl(203, 41%, 72%);
+    --Slate500: hsl(200, 26%, 54%);
+    --Slate700: hsl(200, 24%, 40%);
+    --Slate900: hsl(202, 55%, 16%);
+}
+
+.plus-jakarta-sans-500 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.plus-jakarta-sans-700 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--Slate100);
+    margin: auto;
+    padding: 10em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background-color: var(--colorWhite);
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--colorWhite);
+    width: 35em;
+    height: 37em;
+    margin: auto;
+    padding: 3em;
+    border-radius: 30px 0px 30px 30px;
+}
+
+h1 {
+    color: var(--Slate900);
+    font-size: 25px;
+}
+
+p {
+    margin: 0;
+    color: var(--Slate500);
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.centro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0;
+
+}
+
+h3 {
+    color: var(--Slate500);
+    font-size: 16px;
+    margin-top: 0em;
+    margin-bottom: 0.7em;
+}
+
+.mortgage-amount-container {
+    position: relative;
+    margin: 0;
+}
+
+.mortgage-amount {
+    width: 100%;
+    display: block;
+    padding-right: 4em;
+    padding: 0.5em 2em 0.5em 2em;
+    font-size: 20px;
+    border: 1px solid var(--Slate500);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    background-color: var(--Slate100);
+}
+
+.mortgage-amount-container::after {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    content: "£";
+    font-size: 1em;
+    position: absolute;
+    left: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--Slate500);
+    background-color: var(--Slate100);
+    font-weight: bold;
+}
+
+h4 {
+    color: var(--Slate500);
+    font-size: 16px;
+    margin-top: 1.2em;
+    margin-bottom: 0.7em;
+}
+
+.mortgage-term-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mortgage-term {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 4em;
+    width: 100%;
+    padding: 0.5em 2em 0.5em 2em;
+    font-size: 20px;
+    border: 1px solid var(--Slate500);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    background-color: var(--colorWhite);
+}
+
+.mortgage-term-container::after {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    content: "years";
+    font-weight: bold;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--Slate500);
+    background-color: var(--Slate100);
+    left: auto;
+    right: 1em;
+    display: flex;
+    align-items: center;
+}
+
+h5 {
+    color: var(--Slate500);
+    font-size: 16px;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+}
+
+.interest-rate-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.interest-rate {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 4em;
+    width: 100%;
+    padding: 0.5em 2em 0.5em 2em;
+    font-size: 20px;
+    border: 1px solid var(--Slate500);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    background-color: var(--colorWhite);
+}
+
+.interest-rate-container::after {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    content: "%";
+    font-weight: bold;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--Slate500);
+    background-color: var(--Slate100);
+    left: auto;
+    right: 1em;
+}
+
+.espacio-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+h6 {
+    color: var(--Slate500);
+    font-size: 16px;
+    margin-top: 1.2em;
+    margin-bottom: 0.7em;
+}
+
+.repayment {
+    display: flex;
+    width: 100%;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 20px;
+    border: 1px solid var(--Slate900);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--colorWhite);
+    color: var(--Slate900);
+}
+
+.interest-only {
+    display: flex;
+    margin-top: 0.5em;
+    width: 100%;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 20px;
+    border: 1px solid var(--Slate900);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--colorWhite);
+    color: var(--Slate900);
+}
+
+.repayment::before,
+.interest-only::before {
+    cursor: pointer;
+    gap: 1em;
+    content: '';
+    width: 1em;
+    height: 1em;
+    border: 1px solid var(--Slate900);
+    border-radius: 50%;
+    margin-right: 0.75em;
+    left: 1em;
+}
+
+.calculate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    width: 18em;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--colorLime);
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--Slate900);
+    cursor: pointer;
+}
+
+.icon {
+    margin-right: 0.7em;
+    height: 1.4em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.calculadora {
+    width: 20em;
+    height: 20em;
+    margin-top: 3em;
+    align-self: center;
+}
+
+.result {
+    color: var(--colorWhite);
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.preresultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--Slate900);
+    text-align: center;
+    margin-top: 2em;
+    width: 35em;
+    height: 37em;
+    margin: auto;
+    padding: 3em;
+    border-radius: 0em 1.5em 1.5em 6.25em;
+    position: relative;
+    overflow: hidden;
+}
+
+.requisito {
+    color: var(--Slate100);
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    opacity: 50%;
+    margin-top: 1.5em;
+}
