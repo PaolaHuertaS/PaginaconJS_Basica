@@ -55,11 +55,14 @@ h1 {
     font-size: 25px;
 }
 
-p {
+.limpiar{
+    border:none;
+    background-color: white;
     margin: 0;
     color: var(--Slate500);
     font-size: 16px;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .centro {
@@ -82,6 +85,7 @@ h3 {
 }
 
 .mortgage-amount {
+     cursor: pointer;
     width: 100%;
     display: block;
     padding-right: 4em;
@@ -146,6 +150,7 @@ h5 {
 }
 
 .mortgage-term {
+     cursor: pointer;
     padding-right: 4em;
     width: 100%;
     padding: 0.5em 2em 0.5em 1em;
@@ -182,6 +187,7 @@ h5 {
 }
 
 .interest-rate {
+     cursor: pointer;
     padding-right: 4em;
     width: 100%;
     padding: 0.5em 2em 0.5em 1em;
@@ -222,6 +228,7 @@ h6 {
 }
 
 .repayment {
+     cursor: pointer;
     display: flex;
     align-content: center;
     width: 100%;
@@ -236,7 +243,7 @@ h6 {
 }
 
 .interest-only {
-    
+     cursor: pointer;
     align-content: center;
     display: flex;
     margin-top: 0.8em;
@@ -262,6 +269,11 @@ h6 {
     border-radius: 50%;
     margin-right: 0.75em;
     left: 1em;
+}
+
+.repayment:active,
+.interest-only:active {
+    border-color: yellow;
 }
 
 .calculate {
