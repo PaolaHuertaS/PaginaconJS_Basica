@@ -66,8 +66,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:0;
-
+    margin-bottom: 2em;
 }
 
 h3 {
@@ -86,7 +85,7 @@ h3 {
     width: 100%;
     display: block;
     padding-right: 4em;
-    padding: 0.5em 2em 0.5em 2em;
+    padding: 0.5em 3em 0.5em 3em;
     font-size: 20px;
     border: 1px solid var(--Slate500);
     border-radius: 5px;
@@ -94,28 +93,50 @@ h3 {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    background-color: var(--Slate100);
+    background-color: var(--colorWhite);
 }
 
-.mortgage-amount-container::after {
+.mortgage-amount-container::before {
     font-family: "Plus Jakarta Sans", sans-serif;
     content: "£";
-    font-size: 1em;
-    position: absolute;
-    left: 1em;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--Slate500);
-    background-color: var(--Slate100);
     font-weight: bold;
+    position: absolute;
+    left: 0.1em;
+    top: 0.1em;
+    bottom: 0.1em;
+    width: 3em;
+    background-color: var(--Slate100);
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Slate500);
+    font-size: 16px;
 }
 
 h4 {
     color: var(--Slate500);
     font-size: 16px;
     margin-top: 1.2em;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.9em;
 }
+
+.container {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    gap: 2em;
+    box-shadow:none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h5 {
+    color: var(--Slate500);
+    font-size: 16px;
+    margin-top: 1.2em;
+    margin-bottom: 0.9em;
+}
+
 
 .mortgage-term-container {
     position: relative;
@@ -125,86 +146,72 @@ h4 {
 }
 
 .mortgage-term {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     padding-right: 4em;
     width: 100%;
-    padding: 0.5em 2em 0.5em 2em;
+    padding: 0.5em 2em 0.5em 1em;
     font-size: 20px;
     border: 1px solid var(--Slate500);
     border-radius: 5px;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     background-color: var(--colorWhite);
 }
 
 .mortgage-term-container::after {
-    font-family: "Plus Jakarta Sans", sans-serif;
     content: "years";
-    font-weight: bold;
-    font-size: 1em;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--Slate500);
-    background-color: var(--Slate100);
-    left: auto;
-    right: 1em;
+    right: 0.1em;
+    top: 0.1em;
+    bottom: 0.1em;
+    width: 2.5em;
     display: flex;
     align-items: center;
-}
-
-h5 {
+    padding: 0 1em;
+    font-weight: bold;
+    font-size: 1em;
     color: var(--Slate500);
-    font-size: 16px;
-    margin-top: 1.2em;
-    margin-bottom: 1em;
+    background-color: var(--Slate100);
 }
 
 .interest-rate-container {
     position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .interest-rate {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     padding-right: 4em;
     width: 100%;
-    padding: 0.5em 2em 0.5em 2em;
+    padding: 0.5em 2em 0.5em 1em;
     font-size: 20px;
     border: 1px solid var(--Slate500);
     border-radius: 5px;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     background-color: var(--colorWhite);
 }
 
 .interest-rate-container::after {
-    font-family: "Plus Jakarta Sans", sans-serif;
     content: "%";
+    position: absolute;
+    right: 0.1em;
+    top: 0.1em;
+    bottom: 0.1em;
+    width: 1em;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
     font-weight: bold;
     font-size: 1em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     color: var(--Slate500);
     background-color: var(--Slate100);
-    left: auto;
-    right: 1em;
 }
 
 .espacio-bottom {
     display: flex;
-    justify-content: space-between;
-    gap: 1em;
 }
 
 h6 {
@@ -216,6 +223,7 @@ h6 {
 
 .repayment {
     display: flex;
+    align-content: center;
     width: 100%;
     padding: 0.5em 1em 0.5em 1em;
     font-size: 20px;
@@ -228,8 +236,10 @@ h6 {
 }
 
 .interest-only {
+    
+    align-content: center;
     display: flex;
-    margin-top: 0.5em;
+    margin-top: 0.8em;
     width: 100%;
     padding: 0.5em 1em 0.5em 1em;
     font-size: 20px;
@@ -258,7 +268,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 4em;
     width: 18em;
     padding: 0.5em;
     text-align: center;
