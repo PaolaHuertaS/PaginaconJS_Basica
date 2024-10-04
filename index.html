@@ -21,6 +21,11 @@
       display: none;
     }
 
+
+    .error-message.visible {
+      display: block;
+    }
+
     input.error {
       border: 1px solid red !important;
     }
@@ -28,6 +33,34 @@
     .mortgage-type-container.error .repayment,
     .mortgage-type-container.error .interest-only {
       border-color: red;
+    }
+
+    .mortgage-amount-container.error::before,
+    .mortgage-term-container.error::after,
+    .interest-rate-container.error::after {
+      background-color: var(--colorRed);
+      color: var(--colorWhite);
+    }
+
+    .mortgage-amount-container.error .mortgage-amount,
+    .mortgage-term-container.error .mortgage-term,
+    .interest-rate-container.error .interest-rate {
+      border-color: var(--colorRed);
+    }
+
+    .error .error-message {
+      display: block;
+    }
+
+    .mortgage-type-container .error-message {
+      color: var(--colorRed);
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .mortgage-type-container.error .error-message {
+      display: block;
     }
   </style>
 </head>
@@ -40,36 +73,39 @@
         <button class="plus-jakarta-sans-500 limpiar" id="clearAll">Clear All</button>
       </div>
 
-      <h3 class="plus-jakarta-sans-500">Mortgage Amount</h3>
+       <h3 class="plus-jakarta-sans-500">Mortgage Amount</h3>
       <div class="mortgage-amount-container">
-        <input type="text" id="mortgage-amount" class="mortgage-amount" placeholder="">
-         <div class="error-message">This field is required</div>
+        <input type="number" id="mortgage-amount" class="mortgage-amount" placeholder="">
       </div>
+      <div class="error-message">This field is required</div>
 
       <div class="container">
         <div class="input-group">
-            <h4 class="plus-jakarta-sans-500">Mortgage Term</h4>
-            <div class="mortgage-term-container">
-                <input type="text" class="mortgage-term" placeholder="">
-                <div class="error-message">This field is required</div>
-            </div>
+          <h4 class="plus-jakarta-sans-500">Mortgage Term</h4>
+          <div class="mortgage-term-container">
+            <input type="number" class="mortgage-term" placeholder="">
+          </div>
+          <div class="error-message">This field is required</div>
         </div>
         <div class="input-group">
-            <h5 class="plus-jakarta-sans-500">Interest Rate</h5>
-            <div class="interest-rate-container">
-                <input type="text" class="interest-rate" placeholder="">
-                <div class="error-message">This field is required</div>
-            </div>
+          <h5 class="plus-jakarta-sans-500">Interest Rate</h5>
+          <div class="interest-rate-container">
+            <input type="number" class="interest-rate" placeholder="">
+          </div>
+          <div class="error-message">This field is required</div>
         </div>
-    </div>
+      </div>
 
     <h6 class="plus-jakarta-sans-500">Mortgage Type</h6>
-    <botton class="repayment plus-jakarta-sans-700">Repayment</botton>
-    <botton class="interest-only repayment plus-jakarta-sans-700 ">Interest Only</botton>
-       <div class="error-message">This field is required</div>
-    <botton class="calculate  plus-jakarta-sans-700"><img class="icon" src="icon-calculator.svg">Calculate Repayments</botton>
-  </div>
+      <div class=".mortgage-type-container">
+        <button class="repayment plus-jakarta-sans-700">Repayment</button>
+        <button class="interest-only repayment plus-jakarta-sans-700 ">Interest Only</button>
 
+        <div class="error-message">This field is required</div>
+       <botton class="calculate  plus-jakarta-sans-700"><img class="icon" src="icon-calculator.svg">Calculate Repayments</botton>
+      </div>
+  </div>
+ 
   <div class="preresultado">
     <img src="illustration-empty.svg" class="calculadora">
     <h7 class="result plus-jakarta-sans-700">Results shown here</h7>
