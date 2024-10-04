@@ -69,6 +69,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0.1em;
     margin-bottom: 2em;
 }
 
@@ -85,7 +86,7 @@ h3 {
 }
 
 .mortgage-amount {
-     cursor: pointer;
+    cursor: pointer;
     width: 100%;
     display: block;
     padding-right: 4em;
@@ -150,7 +151,7 @@ h5 {
 }
 
 .mortgage-term {
-     cursor: pointer;
+    cursor: pointer;
     padding-right: 4em;
     width: 100%;
     padding: 0.5em 2em 0.5em 1em;
@@ -187,7 +188,7 @@ h5 {
 }
 
 .interest-rate {
-     cursor: pointer;
+    cursor: pointer;
     padding-right: 4em;
     width: 100%;
     padding: 0.5em 2em 0.5em 1em;
@@ -224,17 +225,17 @@ h6 {
     color: var(--Slate500);
     font-size: 16px;
     margin-top: 1.2em;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.9em;
 }
 
 .repayment {
-     cursor: pointer;
+    cursor: pointer;
     display: flex;
     align-content: center;
     width: 100%;
     padding: 0.5em 1em 0.5em 1em;
     font-size: 20px;
-    border: 1px solid var(--Slate900);
+    border: 1px solid var(--Slate700);
     border-radius: 5px;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -243,14 +244,14 @@ h6 {
 }
 
 .interest-only {
-     cursor: pointer;
+    cursor: pointer;
     align-content: center;
     display: flex;
     margin-top: 0.8em;
     width: 100%;
     padding: 0.5em 1em 0.5em 1em;
     font-size: 20px;
-    border: 1px solid var(--Slate900);
+    border: 1px solid var(--Slate700);
     border-radius: 5px;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -273,14 +274,14 @@ h6 {
 
 .repayment:active,
 .interest-only:active {
-    border-color: yellow;
+    border-color: var(--colorLime);
 }
 
 .calculate {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 4em;
+    margin-top: 2em;
     width: 18em;
     padding: 0.5em;
     text-align: center;
@@ -291,6 +292,18 @@ h6 {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: var(--Slate900);
     cursor: pointer;
+    border: none; 
+    outline: none;
+}
+
+.repayment.selected,
+.interest-only.selected {
+    background-color: var(--colorLime);
+}
+
+.repayment.selected::before,
+.interest-only.selected::before {
+    background-color: var(--Slate900);
 }
 
 .icon {
