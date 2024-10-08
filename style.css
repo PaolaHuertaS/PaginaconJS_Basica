@@ -350,3 +350,62 @@ h6 {
     opacity: 50%;
     margin-top: 1.5em;
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
+}
+
+input.error {
+    border: 1px solid red !important;
+}
+
+.mortgage-type-container.error .repayment,
+.mortgage-type-container.error .interest-only {
+    border-color: none;
+}
+
+.mortgage-amount-container.error::before,
+.mortgage-term-container.error::after,
+.interest-rate-container.error::after {
+    background-color: var(--colorRed);
+    color: var(--colorWhite);
+}
+
+.mortgage-amount-container.error .mortgage-amount,
+.mortgage-term-container.error .mortgage-term,
+.interest-rate-container.error .interest-rate {
+    border-color: var(--colorRed);
+}
+
+.error .error-message {
+    display: block;
+}
+
+.mortgage-type-container .error-message {
+    color: var(--colorRed);
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.mortgage-type-container.error .error-message {
+    display: block;
+}
+
+.mortgage-type-container.error {
+    border: none; 
+}
+
+.repayment:hover{
+    border-color: #F0E68C;
+}
+
+.calculate:hover{
+    background-color:#F0E68C;
+}
