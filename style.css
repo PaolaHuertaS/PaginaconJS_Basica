@@ -304,12 +304,12 @@ h6 {
 
 .repayment.selected,
 .interest-only.selected {
-    background-color: var(--colorLime);
+    border-color: var(--colorLime);
 }
 
 .repayment.selected::before,
 .interest-only.selected::before {
-    background-color: var(--Slate900);
+    background-color: yellow;
 }
 
 .icon {
