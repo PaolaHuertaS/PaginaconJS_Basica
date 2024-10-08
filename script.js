@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Seleccionar elementos del DOM
     const mortgageAmountInput = document.getElementById('mortgage-amount');
     const mortgageTermInput = document.querySelector('.mortgage-term');
     const interestRateInput = document.querySelector('.interest-rate');
@@ -22,30 +22,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearAllButton = document.getElementById('clearAll');
     const mortgageTypeContainer = document.querySelector('.mortgage-type-container');
 
-    
     function mostrarError(elemento) {
-        const container = elemento.closest('.mortgage-amount-container, .mortgage-term-container, .interest-rate-container');
+        const container = elemento.closest('.mortgage-amount-container, .mortgage-term-container, .interest-rate-container, .mortgage-type-container');
         if (container) {
             container.classList.add('error');
-            const errorMensaje = container.nextElementSibling;
+            const errorMensaje = container.querySelector('.error-message') || container.nextElementSibling;
             if (errorMensaje && errorMensaje.classList.contains('error-message')) {
                 errorMensaje.classList.add('visible');
             }
         }
     }
-    
+
     function ocultarError(elemento) {
-        const container = elemento.closest('.mortgage-amount-container, .mortgage-term-container, .interest-rate-container');
+        const container = elemento.closest('.mortgage-amount-container, .mortgage-term-container, .interest-rate-container, .mortgage-type-container');
         if (container) {
             container.classList.remove('error');
-            const errorMensaje = container.nextElementSibling;
+            const errorMensaje = container.querySelector('.error-message') || container.nextElementSibling;
             if (errorMensaje && errorMensaje.classList.contains('error-message')) {
                 errorMensaje.classList.remove('visible');
             }
         }
     }
-    
-    // Validar campos al hacer clic en "Calcular"
+
     calculateButton.addEventListener('click', function(e) {
         e.preventDefault();
         
@@ -57,15 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 ocultarError(input);
             }
         });
-        
+
         if (!repaymentButton.classList.contains('selected') && !interestOnlyButton.classList.contains('selected')) {
-            mostrarError(repaymentButton.parentElement);
+            mostrarError(mortgageTypeContainer);
         } else {
-            ocultarError(repaymentButton.parentElement);
+            ocultarError(mortgageTypeContainer);
         }
     });
-    
-    // Limpiar todos los campos y errores
+
     clearAllButton.addEventListener('click', function() {
         const inputs = [mortgageAmountInput, mortgageTermInput, interestRateInput];
         inputs.forEach(input => {
@@ -74,10 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         repaymentButton.classList.remove('selected');
         interestOnlyButton.classList.remove('selected');
-        ocultarError(repaymentButton.parentElement);
+        ocultarError(mortgageTypeContainer);
     });
-    
-    // Ocultar error al escribir en un campo
+
     [mortgageAmountInput, mortgageTermInput, interestRateInput].forEach(input => {
         input.addEventListener('input', function() {
             if (this.value.trim()) {
@@ -85,17 +81,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Manejar selección de tipo de hipoteca
+
     repaymentButton.addEventListener('click', function() {
         this.classList.add('selected');
         interestOnlyButton.classList.remove('selected');
-        ocultarError(this.parentElement);
+        ocultarError(mortgageTypeContainer);
     });
-    
+
     interestOnlyButton.addEventListener('click', function() {
         this.classList.add('selected');
         repaymentButton.classList.remove('selected');
-        ocultarError(this.parentElement);
+        ocultarError(mortgageTypeContainer);
     });
 });
+
