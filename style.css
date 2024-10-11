@@ -61,8 +61,8 @@ h1 {
     font-size: 25px;
 }
 
-.limpiar{
-    border:none;
+.limpiar {
+    border: none;
     background-color: white;
     margin: 0;
     color: var(--Slate500);
@@ -136,7 +136,7 @@ h4 {
     font-family: "Plus Jakarta Sans", sans-serif;
     display: flex;
     gap: 2em;
-    box-shadow:none;
+    box-shadow: none;
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -298,7 +298,7 @@ h6 {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: var(--Slate900);
     cursor: pointer;
-    border: none; 
+    border: none;
     outline: none;
 }
 
@@ -356,6 +356,7 @@ h6 {
     opacity: 50%;
     margin-top: 1.5em;
 }
+
 .error-message {
     color: red;
     font-size: 12px;
@@ -415,3 +416,33 @@ input.error {
 .calculate:hover{
     background-color:#F0E68C;
 }
+
+.limpiar:hover {
+    color: var(--Slate700);
+}
+
+.mortgage-amount-container:hover::before,
+.mortgage-term-container:hover::after,
+.interest-rate-container:hover::after {
+    background-color: var(--colorLime); 
+    cursor: pointer;
+    border-color: var(--colorLime);
+}
+
+.mortgage-amount:hover,
+.mortgage-term:hover,
+.interest-rate:hover {
+    border-color: var(--colorLime);
+}
+
+.repayment,
+.interest-only {
+    transition: background-color 0.3s ease;
+}
+
+.repayment.selected,
+.interest-only.selected {
+    background-color: #ffffdc;
+}
+
+
