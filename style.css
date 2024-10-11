@@ -527,5 +527,74 @@ input.error {
     color: var(--colorLime);
   }
   
+ .resultados-llenos {
+    display: none; 
+    background-color: var(--Slate900);
+    color: var(--colorWhite);
+    padding: 2em;
+    border-radius: 0 30px 30px 0;
+    width: 35em;
+    height: 37em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .resultados-llenos h8 {
+    font-size: 28px;
+    margin-bottom: 0.5em;
+    display: block;
+  }
+  
+  .resultados-llenos p {
+    font-size: 16px;
+    margin-bottom: 2em;
+    color: var(--Slate300);
+  }
+  
+  .caja-resultados {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5em;
+    border-radius: 10px;
+  }
+  
+  .pagos-mensuales, .pagos-totales {
+    margin-bottom: 1.5em;
+  }
+  
+  .pagos-mensuales h9, .pagos-totales h10 {
+    font-size: 16px;
+    color: var(--Slate300);
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  .cantidad {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--colorLime);
+    margin: 0;
+  }
+  
+  .preresultado {
+    text-align: center;
+  }
+  
+  .preresultado img {
+    margin-bottom: 2em;
+    width: 15em;
+    height: auto;
+  }
+  
+  .preresultado h7 {
+    font-size: 28px;
+    margin-bottom: 1em;
+    display: block;
+  }
+  
+  .preresultado .requisito {
+    font-size: 16px;
+    color: var(--Slate300);
+  }
  
  
