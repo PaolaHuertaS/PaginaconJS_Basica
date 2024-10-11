@@ -156,4 +156,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // nuevo
+    function mostrarResultados(resultados) {
+        const pagoMensual = document.getElementById('pago-mensual');
+        const pagoTotal = document.getElementById('pago-total');
+        const preresultado = document.querySelector('.preresultado');
+        const resultadosLlenos = document.querySelector('.resultados-llenos');
+      
+        pagoMensual.textContent = `£${resultados.mensual}`;
+        pagoTotal.textContent = `£${resultados.total}`;
+        preresultado.style.display = 'none';
+        resultadosLlenos.style.display = 'block';
+      }
+      
+      function ocultarResultados() {
+        const preresultado = document.querySelector('.preresultado');
+        const resultadosLlenos = document.querySelector('.resultados-llenos');
+      
+        preresultado.style.display = 'flex';
+        resultadosLlenos.style.display = 'none';
+      }
+      
+      clearAllButton.addEventListener('click', function() {
+        ocultarResultados();
+      });
 });
