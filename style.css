@@ -234,6 +234,61 @@ h6 {
     margin-bottom: 0.9em;
 }
 
+.repayment,
+.interest-only {
+    margin-top: 0.7em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 1em;
+    font-size: 20px;
+    border: 1px solid var(--Slate700);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--colorWhite);
+    color: var(--Slate900);
+    transition: all 0.3s ease;
+    border-color: var(--Slate700);
+}
+
+.repayment::before,
+.interest-only::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    border: 1px solid var(--Slate700);
+    border-radius: 50%;
+    margin-right: 0.75em;
+    transition: all 0.3s ease;
+    border-color: var(--Slate700);;
+}
+
+.repayment:hover,
+.interest-only:hover {
+    border-color: var(--colorLime);
+}
+
+.repayment:hover::before,
+.interest-only:hover::before {
+    border-color: var(--colorLime);
+}
+
+.repayment.selected,
+.interest-only.selected {
+    background-color: #ffffdc;
+    border-color: var(--colorLime);
+}
+
+.repayment.selected::before,
+.interest-only.selected::before {
+    border-color: var(--colorLime);
+    background-color: var(--colorLime);
+    box-shadow: inset 0 0 0 0.19em #ffffdc;
+}
+
+/*
 .repayment {
     cursor: pointer;
     display: flex;
@@ -277,7 +332,7 @@ h6 {
     margin-right: 0.75em;
     left: 1em;
 }
-
+*/
 .repayment:active,
 .interest-only:active {
     border-color: var(--colorLime);
@@ -287,7 +342,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 2.8em;
     width: 18em;
     padding: 0.5em;
     text-align: center;
@@ -446,3 +501,31 @@ input.error {
 }
 
 
+.resultados-llenos  {
+    display: none;
+    font-size: 24px;
+    margin-bottom: 1em;
+  }
+  
+  .resultados-llenos p {
+    margin-bottom: 2em;
+  }
+  
+  .caja-resultados {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    border-radius: 10px;
+  }
+  
+  .pagos-mensuales, .pagos-totales {
+    margin-bottom: 1.5em;
+  }
+  
+  .cantidad {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--colorLime);
+  }
+  
+ 
+ 
