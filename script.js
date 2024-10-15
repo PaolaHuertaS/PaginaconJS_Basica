@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const mortgageAmountInput = document.getElementById('mortgage-amount');
     const mortgageTermInput = document.querySelector('.mortgage-term');
@@ -112,6 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function calcularHipoteca(monto, plazo, tasa, tipo) {
         const tasaMensual = tasa / 100 / 12;
         const plazoBimestres = plazo * 12;
+
+        if (monto > 1e15 || plazo > 1000 || tasa > 100) {
+            return { error: "The values ​​are greater than what you should enter" };
+        }
         
         let pagoMensual;
         if (tipo === 'repayment') {
@@ -126,6 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
             mensual: pagoMensual.toFixed(2),
             total: totalPagado.toFixed(2)
         };
+
+        
+        
     }
 
     function mostrarResultados(resultados) {
@@ -165,6 +171,16 @@ document.addEventListener('DOMContentLoaded', function() {
       
         pagoMensual.textContent = `£${resultados.mensual}`;
         pagoTotal.textContent = `£${resultados.total}`;
+        preresultado.style.display = 'none';
+        resultadosLlenos.style.display = 'block';
+
+        if (resultados.error) {
+            pagoMensual.textContent = "Error";
+            pagoTotal.textContent = resultados.error;
+        } else {
+            pagoMensual.textContent = `£${resultados.mensual}`;
+            pagoTotal.textContent = `£${resultados.total}`;
+        }
         preresultado.style.display = 'none';
         resultadosLlenos.style.display = 'block';
       }
