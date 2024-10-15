@@ -500,101 +500,92 @@ input.error {
     background-color: #ffffdc;
 }
 
-
-.resultados-llenos  {
-    display: none;
-    font-size: 24px;
-    margin-bottom: 1em;
-  }
-  
-  .resultados-llenos p {
-    margin-bottom: 2em;
-  }
-  
-  .caja-resultados {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2em;
-    border-radius: 10px;
-  }
-  
-  .pagos-mensuales, .pagos-totales {
-    margin-bottom: 1.5em;
-  }
-  
-  .cantidad {
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--colorLime);
-  }
-  
- .resultados-llenos {
-    display: none; 
+.resultados-llenos {
     background-color: var(--Slate900);
-    color: var(--colorWhite);
-    padding: 2em;
-    border-radius: 0 30px 30px 0;
+    border-radius: 0em 1.5em 1.5em 6.25em;
     width: 35em;
     height: 37em;
+    padding: 3em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-  
-  .resultados-llenos h8 {
+    justify-content: flex-start;
+}
+
+.h8 {
     font-size: 28px;
+    color: #ffffff;
     margin-bottom: 0.5em;
-    display: block;
-  }
-  
-  .resultados-llenos p {
-    font-size: 16px;
+}
+
+.parrafo {
+    font-size: 21px;
     margin-bottom: 2em;
     color: var(--Slate300);
-  }
-  
-  .caja-resultados {
-    background-color: rgba(255, 255, 255, 0.1);
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.caja-resultados {
+    border-top: 0.3em solid var(--colorLime);
+    background-color: rgba(14,36,49,255);
     padding: 1.5em;
     border-radius: 10px;
-  }
-  
-  .pagos-mensuales, .pagos-totales {
-    margin-bottom: 1.5em;
-  }
-  
-  .pagos-mensuales h9, .pagos-totales h10 {
+    margin-top: 1em;
+}
+
+.pagos-mensuales {
+    margin-top: 1em; 
+    margin-bottom: 1.5em; 
+    padding-bottom: 1.5em;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.pagos-mensuales,
+.pagos-totales {
     font-size: 16px;
     color: var(--Slate300);
     display: block;
+}
+
+.h9,
+.h10 {
+    font-size: 16px;
+    color: #a3b3c6;
+    display: block;
     margin-bottom: 0.5em;
-  }
-  
-  .cantidad {
-    font-size: 36px;
+}
+
+.cantidad {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.cantidad-mensual {
+    font-size: 50px;
     font-weight: bold;
     color: var(--colorLime);
-    margin: 0;
-  }
-  
-  .preresultado {
+    margin:0;
+}
+
+.preresultado {
     text-align: center;
-  }
-  
-  .preresultado img {
+}
+
+.preresultado img {
     margin-bottom: 2em;
     width: 15em;
     height: auto;
-  }
-  
-  .preresultado h7 {
+}
+
+.preresultado .h7 {
     font-size: 28px;
     margin-bottom: 1em;
     display: block;
-  }
-  
-  .preresultado .requisito {
+}
+
+.preresultado .requisito {
     font-size: 16px;
     color: var(--Slate300);
-  }
- 
- 
+}
