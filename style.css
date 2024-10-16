@@ -589,3 +589,188 @@ input.error {
     font-size: 16px;
     color: var(--Slate300);
 }
+
+
+@media (max-width: 915px) {
+    body {
+        padding: 1em;
+        background-color: var(--colorWhite);
+    }
+
+    .container {
+        flex-direction: column;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .principal {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .centro {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5em;
+        align-self: flex-start;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 0;
+        color: var(--Slate900);
+    }
+
+    .limpiar {
+        font-size: 0.875em;
+        margin-top: 1em;
+        padding-left: 0;
+        background: none;
+        align-self: flex-start;
+        border: none;
+        color: var(--Slate500);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    h3, h4, h5, h6 {
+        font-size: 0.875em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        color: var(--Slate700);
+    }
+
+    .mortgage-amount-container,
+    .mortgage-term-container {
+        position: relative;
+    }
+
+    .interest-rate-container {
+        margin-top:0;
+    }
+    .mortgage-amount,
+    .mortgage-term,
+    .interest-rate {
+        width: 100%;
+        font-size: 1em;
+        padding: 0.75em 3em 0.75em 3em;
+        border: 1px solid var(--Slate300);
+        border-radius: 0.25em;
+        background-color: var(--colorWhite);
+    }
+
+    .mortgage-amount-container::before,
+    .mortgage-term-container::after,
+    .interest-rate-container::after {
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        width: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Slate100);
+        color: var(--Slate700);
+        font-size: 0.875em;
+    }
+
+    .mortgage-amount-container::before {
+        content: "£";
+        left: 1px;
+        border-radius: 0.25em 0 0 0.25em;
+    }
+
+    .mortgage-term-container::after {
+        content: "years";
+        right: 1px;
+        border-radius: 0 0.25em 0.25em 0;
+    }
+
+    .interest-rate-container::after {
+        content: "%";
+        right: 1px;
+        border-radius: 0 0.25em 0.25em 0;
+    }
+
+    .mortgage-type-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+    .repayment,
+    .interest-only {
+        width: 100%;
+        font-size: 1em;
+        margin-top: 0.3em;
+        padding: 0.75em 1em;
+        border: 1px solid var(--Slate300);
+        border-radius: 0.25em;
+        background-color: var(--colorWhite);
+        display: flex;
+        align-items: center;
+    }
+
+    .repayment::before,
+    .interest-only::before {
+        content: '';
+        width: 1.25em;
+        height: 1.25em;
+        border: 1px solid var(--Slate300);
+        border-radius: 50%;
+        margin-right: 0.75em;
+    }
+
+    .calculate {
+        width: 100%;
+        margin-top: 1.3em;
+        padding: 0.9em;
+        font-size: 1em;
+        border-radius: 2em;
+        background-color: var(--colorLime);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        color: var(--Slate900);
+        font-weight: bold;
+    }
+
+    .icon {
+        margin-right: 0.5em;
+    }
+
+    .resultados {
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    .preresultado {
+        width: 100%;
+        padding: 2em 1.5em;
+        border-radius: 0.5em;
+        background-color: var(--Slate900);
+        color: var(--colorWhite);
+        text-align: center;
+    }
+
+    .calculadora {
+        width: 40%;
+        max-width: 150px;
+        margin-bottom: 1em;
+    }
+
+    .result {
+        font-size: 1.25em;
+        margin-bottom: 0.5em;
+        color: var(--colorWhite);
+    }
+
+    .requisito {
+        font-size: 0.875em;
+        color: var(--Slate300);
+    }
+}
