@@ -590,10 +590,15 @@ input.error {
     color: var(--Slate300);
 }
 
-
 @media (max-width: 915px) {
+     .container, .principal, .resultados {
+        box-sizing: border-box;
+    }
+
     body {
-        padding: 1em;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0em;
         background-color: var(--colorWhite);
     }
 
@@ -607,11 +612,12 @@ input.error {
     .principal {
         width: 100%;
         height: auto;
-        padding: 0;
+        padding: 2em;
         border-radius: 0;
     }
 
     .centro {
+        margin-top: 0.5em;
         display: flex;
         flex-direction: column;
         margin-bottom: 1.5em;
@@ -632,25 +638,35 @@ input.error {
         align-self: flex-start;
         border: none;
         color: var(--Slate500);
-        text-decoration: none;
         cursor: pointer;
+        text-decoration: underline;
     }
 
     h3, h4, h5, h6 {
         font-size: 0.875em;
-        margin-top: 1em;
-        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        margin-bottom: 0.25em;
         color: var(--Slate700);
     }
 
     .mortgage-amount-container,
-    .mortgage-term-container {
+    .mortgage-term-container,
+    .interest-rate-container {
+        margin-bottom: 0.5em; 
+    }
+
+    .mortgage-amount-container,
+    .mortgage-term-container,
+    .interest-rate-container {
         position: relative;
+        margin-bottom: 1em; 
     }
 
     .interest-rate-container {
-        margin-top:0;
+        position: relative;
+        margin-top: 1em; 
     }
+
     .mortgage-amount,
     .mortgage-term,
     .interest-rate {
@@ -660,6 +676,11 @@ input.error {
         border: 1px solid var(--Slate300);
         border-radius: 0.25em;
         background-color: var(--colorWhite);
+    }
+
+    .mortgage-term,
+    .interest-rate {
+        padding-left: 1em; 
     }
 
     .mortgage-amount-container::before,
@@ -727,6 +748,7 @@ input.error {
     .calculate {
         width: 100%;
         margin-top: 1.3em;
+        margin-bottom: 0;
         padding: 0.9em;
         font-size: 1em;
         border-radius: 2em;
@@ -745,7 +767,7 @@ input.error {
 
     .resultados {
         width: 100%;
-        margin-top: 1em;
+        margin-top: 0.5em;
     }
 
     .preresultado {
@@ -780,4 +802,90 @@ input.error {
         max-width: 80%;
         line-height: 1.4;
     }
+
+    .resultados-llenos {
+        width: 100%;
+        height: auto;
+        padding: 2em 1.5em;
+        border-radius: 0;
+    }
+
+    .calculadora {
+        width: 50%;
+        max-width: 150px;
+        margin-bottom: 1.5em;
+    }
+
+    .h7 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .requisito {
+        font-size: 1em;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+
+    .h8 {
+        font-size: 1.5em;
+    }
+
+    .parrafo {
+        font-size: 1em;
+    }
+
+    .caja-resultados {
+        padding: 1.5em;
+    }
+
+    .cantidad-mensual {
+        font-size: 2.5em;
+    }
+
+    .cantidad {
+        font-size: 1.5em;
+    }
+
+    .h8 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+
+    .parrafo {
+        font-size: 0.9em;
+        color: var(--Slate300);
+        margin-bottom: 1.5em;
+    }
+
+    .caja-resultados {
+        border-top: 2px solid var(--colorLime);
+        padding-top: 1em;
+    }
+
+    .pagos-mensuales,
+    .pagos-totales {
+        margin-bottom: 1em;
+    }
+
+    .h9,
+    .h10 {
+        font-size: 0.9em;
+        color: var(--Slate300);
+    }
+
+    .cantidad-mensual,
+    .cantidad {
+        font-size: 1.5em;
+        color: var(--colorWhite);
+        margin: 0.2em 0;
+    }
+
+    .resultados, .resultados-llenos, .preresultado {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 0;
+    }
+
+
 }
