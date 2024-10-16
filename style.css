@@ -745,32 +745,39 @@ input.error {
 
     .resultados {
         width: 100%;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     .preresultado {
         width: 100%;
+        height: auto;
         padding: 2em 1.5em;
-        border-radius: 0.5em;
+        border-radius: 0;
         background-color: var(--Slate900);
         color: var(--colorWhite);
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .calculadora {
         width: 40%;
-        max-width: 150px;
+        max-width: 120px;
         margin-bottom: 1em;
     }
 
     .result {
-        font-size: 1.25em;
+        font-size: 1.2em;
         margin-bottom: 0.5em;
         color: var(--colorWhite);
     }
 
     .requisito {
-        font-size: 0.875em;
+        font-size: 0.9em;
         color: var(--Slate300);
+        margin-top: 0.5em;
+        max-width: 80%;
+        line-height: 1.4;
     }
 }
