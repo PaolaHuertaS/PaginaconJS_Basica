@@ -372,6 +372,7 @@ h6 {
     font-size: 12px;
     margin-top: 5px;
     display: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .error-message.visible {
@@ -456,6 +457,7 @@ input.error {
 }
 
 .resultados-llenos {
+    font-family: "Plus Jakarta Sans", sans-serif;
     background-color: var(--Slate900);
     border-radius: 0em 1.5em 1.5em 6.25em;
     width: 35em;
