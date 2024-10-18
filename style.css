@@ -11,8 +11,8 @@
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .plus-jakarta-sans-500 {
@@ -132,7 +132,7 @@ h4 {
     margin-bottom: 0.9em;
 }
 
-.container {
+.containerdos {
     font-family: "Plus Jakarta Sans", sans-serif;
     display: flex;
     gap: 2em;
@@ -147,7 +147,6 @@ h5 {
     margin-top: 1.2em;
     margin-bottom: 0.9em;
 }
-
 
 .mortgage-term-container {
     position: relative;
@@ -262,7 +261,8 @@ h6 {
     border-radius: 50%;
     margin-right: 0.75em;
     transition: all 0.3s ease;
-    border-color: var(--Slate700);;
+    border-color: var(--Slate700);
+    ;
 }
 
 .repayment:hover,
@@ -288,51 +288,6 @@ h6 {
     box-shadow: inset 0 0 0 0.19em #ffffdc;
 }
 
-/*
-.repayment {
-    cursor: pointer;
-    display: flex;
-    align-content: center;
-    width: 100%;
-    padding: 0.5em 1em 0.5em 1em;
-    font-size: 20px;
-    border: 1px solid var(--Slate700);
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: var(--colorWhite);
-    color: var(--Slate900);
-}
-
-.interest-only {
-    cursor: pointer;
-    align-content: center;
-    display: flex;
-    margin-top: 0.8em;
-    width: 100%;
-    padding: 0.5em 1em 0.5em 1em;
-    font-size: 20px;
-    border: 1px solid var(--Slate700);
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: var(--colorWhite);
-    color: var(--Slate900);
-}
-
-.repayment::before,
-.interest-only::before {
-    cursor: pointer;
-    gap: 1em;
-    content: '';
-    width: 1em;
-    height: 1em;
-    border: 1px solid var(--Slate900);
-    border-radius: 50%;
-    margin-right: 0.75em;
-    left: 1em;
-}
-*/
 .repayment:active,
 .interest-only:active {
     border-color: var(--colorLime);
@@ -461,15 +416,15 @@ input.error {
 }
 
 .mortgage-type-container.error {
-    border: none; 
+    border: none;
 }
 
-.repayment:hover{
+.repayment:hover {
     border-color: #F0E68C;
 }
 
-.calculate:hover{
-    background-color:#F0E68C;
+.calculate:hover {
+    background-color: #F0E68C;
 }
 
 .limpiar:hover {
@@ -479,7 +434,7 @@ input.error {
 .mortgage-amount-container:hover::before,
 .mortgage-term-container:hover::after,
 .interest-rate-container:hover::after {
-    background-color: var(--colorLime); 
+    background-color: var(--colorLime);
     cursor: pointer;
     border-color: var(--colorLime);
 }
@@ -527,15 +482,15 @@ input.error {
 
 .caja-resultados {
     border-top: 0.3em solid var(--colorLime);
-    background-color: rgba(14,36,49,255);
+    background-color: rgba(14, 36, 49, 255);
     padding: 1.5em;
     border-radius: 10px;
     margin-top: 1em;
 }
 
 .pagos-mensuales {
-    margin-top: 1em; 
-    margin-bottom: 1.5em; 
+    margin-top: 1em;
+    margin-bottom: 1.5em;
     padding-bottom: 1.5em;
     border-bottom: 3px solid rgba(255, 255, 255, 0.1);
 }
@@ -566,7 +521,7 @@ input.error {
     font-size: 50px;
     font-weight: bold;
     color: var(--colorLime);
-    margin:0;
+    margin: 0;
 }
 
 .preresultado {
@@ -590,6 +545,7 @@ input.error {
     color: var(--Slate300);
 }
 
+
 @media (max-width: 915px) {
      .container, .principal, .resultados {
         box-sizing: border-box;
@@ -612,7 +568,7 @@ input.error {
     .principal {
         width: 100%;
         height: auto;
-        padding: 2em;
+        padding: 1.5em;
         border-radius: 0;
     }
 
@@ -642,36 +598,32 @@ input.error {
         text-decoration: underline;
     }
 
-    h3, h4, h5, h6 {
+    h3, h4, h5 , h6 {
         font-size: 0.875em;
         margin-top: 0.5em;
-        margin-bottom: 0.25em;
+        margin-bottom: 0.7em;
         color: var(--Slate700);
     }
 
-    .mortgage-amount-container,
-    .mortgage-term-container,
-    .interest-rate-container {
-        margin-bottom: 0.5em; 
+    .containerdos {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
     }
 
     .mortgage-amount-container,
     .mortgage-term-container,
     .interest-rate-container {
         position: relative;
-        margin-bottom: 1em; 
-    }
-
-    .interest-rate-container {
-        position: relative;
-        margin-top: 1em; 
     }
 
     .mortgage-amount,
     .mortgage-term,
     .interest-rate {
-        width: 100%;
+        font-weight:600;
         font-size: 1em;
+        width: 100%;
+        color: var(--Slate900);
         padding: 0.75em 3em 0.75em 3em;
         border: 1px solid var(--Slate300);
         border-radius: 0.25em;
@@ -719,9 +671,9 @@ input.error {
     .mortgage-type-container {
         display: flex;
         flex-direction: column;
-        gap: 0.75em;
+        gap: 0.5em;
     }
-
+    
     .repayment,
     .interest-only {
         width: 100%;
@@ -874,7 +826,12 @@ input.error {
         color: var(--Slate300);
     }
 
-    .cantidad-mensual,
+    .cantidad-mensual {
+        font-size: 2.2em;
+        color: var(--colorLime);
+        margin: 0.2em 0;
+    }
+
     .cantidad {
         font-size: 1.5em;
         color: var(--colorWhite);
